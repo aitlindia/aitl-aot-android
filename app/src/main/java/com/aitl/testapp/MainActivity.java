@@ -1,5 +1,6 @@
 package com.aitl.testapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String TAG = "MainActivity";
 
-    Button myButton;
+    Button myButton, sumButton;
     CheckBox myCheckBox;
     EditText namePerson;
     EditText ebNumber1,ebNumber2;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         ebNumber1 = (EditText) findViewById(R.id.editText3);
         ebNumber2 = (EditText) findViewById(R.id.editText4);
         tvOutput = (TextView) findViewById(R.id.output);
+        sumButton = (Button) findViewById(R.id.buttonsum);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         myButton.setOnClickListener(buttonClickListner);
-        myCheckBox.setOnCheckedChangeListener(mycbListner); //mycbListner
+        myCheckBox.setOnCheckedChangeListener(mycbListner); //mycbListner //buttonSumClickListner
+        sumButton.setOnClickListener(buttonSumClickListner);
     }
 
     @Override
@@ -101,6 +104,20 @@ public class MainActivity extends AppCompatActivity {
             tvOutput.setText("Sum Vale:"+sum);
 
             Toast.makeText(getApplicationContext(),"Button Clicked By: "+name,Toast.LENGTH_SHORT).show();
+
+            Intent myIntent = new Intent(MainActivity.this,Main2Activity.class);
+
+            startActivity(myIntent);
+        }
+    };
+
+
+    Button.OnClickListener buttonSumClickListner = new Button.OnClickListener(){
+
+        @Override
+        public void onClick(View view) {
+
+            Toast.makeText(getApplicationContext(),"Button Clicked By: ",Toast.LENGTH_SHORT).show();
         }
     };
 
