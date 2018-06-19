@@ -20,7 +20,10 @@ public class MainActivity extends AppCompatActivity {
 
     private String TAG = "MainActivity";
 
-    Button myButton;
+    Button myButton1;
+    Button myButton2;
+    Button myButton3;
+    Button myButton4;
     CheckBox myCheckBox;
     EditText namePerson;
     EditText ebNumber1,ebNumber2;
@@ -33,7 +36,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        myButton = (Button)findViewById(R.id.button);
+        myButton1 = (Button)findViewById(R.id.buttonSum);
+        myButton2 = (Button)findViewById(R.id.buttonSub);
+        myButton3 = (Button)findViewById(R.id.buttonMul);
+        myButton4 = (Button)findViewById(R.id.buttonDiv);
         myCheckBox = (CheckBox)findViewById(R.id.checkBox);
         namePerson = (EditText) findViewById(R.id.editText);
         ebNumber1 = (EditText) findViewById(R.id.editText3);
@@ -49,7 +55,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        myButton.setOnClickListener(buttonClickListner);
+        myButton1.setOnClickListener(buttonClickListner);
+        myButton2.setOnClickListener(buttonClickListner);
+        myButton3.setOnClickListener(buttonClickListner);
+        myButton4.setOnClickListener(buttonClickListner);
         myCheckBox.setOnCheckedChangeListener(mycbListner); //mycbListner
     }
 

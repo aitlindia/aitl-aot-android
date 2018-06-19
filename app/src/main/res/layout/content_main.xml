@@ -20,11 +20,29 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonSum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="ButtonOncLick"
-        android:text="Button" />
+        android:text="ADD" />
+    <Button
+        android:id="@+id/buttonSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ButtonOncLick"
+        android:text="Sub" />
+    <Button
+        android:id="@+id/buttonMul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ButtonOncLick"
+        android:text="Mul" />
+    <Button
+        android:id="@+id/buttonDiv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ButtonOncLick"
+        android:text="Div" />
 
     <CheckBox
         android:id="@+id/checkBox"
