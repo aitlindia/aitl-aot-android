@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
     }
     */
 
-    Button.OnClickListener buttonClickListner = new Button.OnClickListener(){
+    Button.OnClickListener buttonsum = new Button.OnClickListener(){
 
         @Override
         public void onClick(View view) {
@@ -117,11 +117,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    
 
 
     CheckBox.OnCheckedChangeListener mycbListner = new CheckBox.OnCheckedChangeListener(){
 
         @Override
+
         public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
             Log.d(TAG,"Check Box Checked Status: "+b);
