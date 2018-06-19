@@ -24,7 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="ButtonOncLick"
-        android:text="Button" />
+        android:text="ADD" />
+
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -69,6 +70,12 @@
         android:ems="10"
         android:hint="Number 2"
         android:inputType="number" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 
 
 </LinearLayout>

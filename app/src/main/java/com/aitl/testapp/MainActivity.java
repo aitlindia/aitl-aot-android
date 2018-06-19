@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private String TAG = "MainActivity";
 
     Button myButton;
+
     CheckBox myCheckBox;
     EditText namePerson;
     EditText ebNumber1,ebNumber2;
@@ -32,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         myButton = (Button)findViewById(R.id.button);
         myCheckBox = (CheckBox)findViewById(R.id.checkBox);
         namePerson = (EditText) findViewById(R.id.editText);
@@ -119,4 +119,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Check Box Checked Status: "+b,Toast.LENGTH_SHORT).show();
         }
     };
+
+    public void ButtonOncLick(View view) {
+    }
 }
