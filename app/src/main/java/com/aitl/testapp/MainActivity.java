@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String TAG = "MainActivity";
 
-    Button myButton;
+    Button addButton,sub,mult,div;
     CheckBox myCheckBox;
     EditText namePerson;
     EditText ebNumber1,ebNumber2;
@@ -33,9 +33,12 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        myButton = (Button)findViewById(R.id.button);
-        myCheckBox = (CheckBox)findViewById(R.id.checkBox);
-        namePerson = (EditText) findViewById(R.id.editText);
+        addButton = (Button)findViewById(R.id.add);
+        sub = (Button)findViewById(R.id.sub);
+        mult = (Button)findViewById(R.id.mult);
+        div = (Button)findViewById(R.id.div);
+       // myCheckBox = (CheckBox)findViewById(R.id.checkBox);
+        //namePerson = (EditText) findViewById(R.id.editText);
         ebNumber1 = (EditText) findViewById(R.id.editText3);
         ebNumber2 = (EditText) findViewById(R.id.editText4);
         tvOutput = (TextView) findViewById(R.id.output);
@@ -49,8 +52,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        myButton.setOnClickListener(buttonClickListner);
-        myCheckBox.setOnCheckedChangeListener(mycbListner); //mycbListner
+        addButton.setOnClickListener(addition);
+        sub.setOnClickListener(substract);
+        mult.setOnClickListener(multiplication);
+        div.setOnClickListener(divison);
+
+       // myCheckBox.setOnCheckedChangeListener(mycbListner); //mycbListner
     }
 
     @Override
@@ -74,43 +81,85 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    int n1,n2;
+    Button.OnClickListener addition = new Button.OnClickListener(){
 
-    /*
-    public void ButtonOncLick(View view) {
-        Toast.makeText(getApplicationContext(),"Button Clicked!",Toast.LENGTH_SHORT).show();
-    }
-
-
-    public void ButtonOncLick(View view) {
-
-    }
-    */
-
-    Button.OnClickListener buttonClickListner = new Button.OnClickListener(){
 
         @Override
         public void onClick(View view) {
 
-            String name = namePerson.getText().toString();
+           // String name = namePerson.getText().toString();
 
-            int n1 = Integer.valueOf(ebNumber1.getText().toString());
-            int n2 = Integer.valueOf(ebNumber2.getText().toString());
+             n1 = Integer.valueOf(ebNumber1.getText().toString());
+             n2 = Integer.valueOf(ebNumber2.getText().toString());
 
             int sum =  n1 + n2;
 
             tvOutput.setText("Sum Vale:"+sum);
 
-            Toast.makeText(getApplicationContext(),"Button Clicked By: "+name,Toast.LENGTH_SHORT).show();
+           // Toast.makeText(getApplicationContext(),"Button Clicked By: "+name,Toast.LENGTH_SHORT).show();
+        }
+
+    };
+    Button.OnClickListener substract = new Button.OnClickListener(){
+
+        @Override
+        public void onClick(View view) {
+
+            // String name = namePerson.getText().toString();
+
+            n1 = Integer.valueOf(ebNumber1.getText().toString());
+            n2 = Integer.valueOf(ebNumber2.getText().toString());
+
+            int sum =  n1 - n2;
+
+            tvOutput.setText("Sum Vale:"+sum);
+
+            // Toast.makeText(getApplicationContext(),"Button Clicked By: "+name,Toast.LENGTH_SHORT).show();
+        }
+    };
+    Button.OnClickListener multiplication = new Button.OnClickListener(){
+
+        @Override
+        public void onClick(View view) {
+
+            // String name = namePerson.getText().toString();
+
+            n1 = Integer.valueOf(ebNumber1.getText().toString());
+            n2 = Integer.valueOf(ebNumber2.getText().toString());
+
+            int sum =  n1 * n2;
+
+            tvOutput.setText("Sum Vale:"+sum);
+
+            // Toast.makeText(getApplicationContext(),"Button Clicked By: "+name,Toast.LENGTH_SHORT).show();
+        }
+    };
+    Button.OnClickListener divison = new Button.OnClickListener(){
+
+        @Override
+        public void onClick(View view) {
+
+            // String name = namePerson.getText().toString();
+
+            n1 = Integer.valueOf(ebNumber1.getText().toString());
+            n2 = Integer.valueOf(ebNumber2.getText().toString());
+
+            int sum =  n1 / n2;
+
+            tvOutput.setText("Sum Vale:"+sum);
+
+            // Toast.makeText(getApplicationContext(),"Button Clicked By: "+name,Toast.LENGTH_SHORT).show();
         }
     };
 
-    public void MyCBOnClick(View view) {
+   /* public void MyCBOnClick(View view) {
 
-    }
+    }*/
 
 
 
-    CheckBox.OnCheckedChangeListener mycbListner = new CheckBox.OnCheckedChangeListener(){
+   /* CheckBox.OnCheckedChangeListener mycbListner = new CheckBox.OnCheckedChangeListener(){
 
         @Override
         public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -118,5 +167,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG,"Check Box Checked Status: "+b);
             Toast.makeText(getApplicationContext(),"Check Box Checked Status: "+b,Toast.LENGTH_SHORT).show();
         }
-    };
+    };*/
+
+
 }
