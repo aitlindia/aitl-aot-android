@@ -26,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
     EditText ebNumber1,ebNumber2;
     TextView tvOutput;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         addButton = (Button)findViewById(R.id.add);
+
+
         sub = (Button)findViewById(R.id.sub);
         mult = (Button)findViewById(R.id.mult);
         div = (Button)findViewById(R.id.div);
