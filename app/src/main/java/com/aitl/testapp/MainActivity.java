@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
 
-            String name = namePerson.getText().toString();
+            /*String name = namePerson.getText().toString();
 
             int n1 = Integer.valueOf(ebNumber1.getText().toString());
             int n2 = Integer.valueOf(ebNumber2.getText().toString());
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
             tvOutput.setText("Sum Vale:"+sum);
 
-            Toast.makeText(getApplicationContext(),"Button Clicked By: "+name,Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Button Clicked By: "+name,Toast.LENGTH_SHORT).show();*/
 
             Intent myIntent = new Intent(MainActivity.this,Main2Activity.class);
 
