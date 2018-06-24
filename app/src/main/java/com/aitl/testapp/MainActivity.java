@@ -105,8 +105,8 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(getApplicationContext(),"Button Clicked By: "+name,Toast.LENGTH_SHORT).show();*/
 
-            Intent myIntent = new Intent(MainActivity.this,Main2Activity.class);
-
+            //starting Main3Activity
+            Intent myIntent = new Intent(MainActivity.this,Main3Activity.class);
             startActivity(myIntent);
         }
     };
@@ -118,6 +118,10 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
 
             Toast.makeText(getApplicationContext(),"Button Clicked By: ",Toast.LENGTH_SHORT).show();
+
+            //starting Main2Activity
+            Intent myIntent = new Intent(MainActivity.this,Main2Activity.class);
+            startActivity(myIntent);
         }
     };
 

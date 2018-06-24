@@ -9,23 +9,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-
-    <!--<fragment
-        android:id="@+id/fragment1"
-        android:name="com.aitl.testapp.Fragmant1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
-
-    <fragment
-        android:id="@+id/fragment2"
-        android:name="com.aitl.testapp.Fragment2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>-->
-
-
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -38,12 +21,12 @@
         android:background="#FF0000">
         <Button
             android:id="@+id/button1"
-            android:text="Button1"
+            android:text="Fragment 1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
             android:id="@+id/button2"
-            android:text="Button2"
+            android:text="Fragment 2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
